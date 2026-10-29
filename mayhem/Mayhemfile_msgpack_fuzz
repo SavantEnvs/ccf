@@ -1,0 +1,9 @@
+project: savantenvs/ccf
+target: msgpack_fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/msgpack_fuzz/testsuite
+cmds:
+  - cmd: /mayhem/msgpack_fuzz
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/ccf
+target: cbor_fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cbor_fuzz/testsuite
+cmds:
+  - cmd: /mayhem/cbor_fuzz
+    libfuzzer: true
+    timeout: 10
